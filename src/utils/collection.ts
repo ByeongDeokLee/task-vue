@@ -25,7 +25,7 @@ export function highPriorityFirst(tasks: SimpleTask[]): SimpleTask[] {
   // lodash.sortBy 또는 Array.prototype.sort 를 사용할 수 있습니다.
   // 구현하세요.
 
-  return tasks;
+  return tasks.sort();
 }
 
 // TODO 03: (기초) done 상태로 groupBy 하여 { true: SimpleTask[]; false: SimpleTask[] } 형태를 만드세요.
