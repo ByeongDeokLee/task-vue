@@ -34,5 +34,17 @@ export function groupByDone(
 ): Record<"true" | "false", SimpleTask[]> {
   // 힌트: lodash.groupBy 사용 가능
   // 구현하세요.
-  return { true: [], false: [] };
+
+  var trueList = [];
+  var falseList = [];
+
+  tasks.map((val) => {
+    if (val.done) {
+      trueList.push(val);
+    } else {
+      falseList.push(val);
+    }
+  });
+
+  return { true: [trueList], false: [falseList] };
 }
